@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Age Calculator – Exact Years, Months & Days</title>
+  <meta name="description" content="Calculate your exact age in years, months, and days from your birth date. Clean and fast." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Utility Hub</a>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link is-active" href="/#tools">Tools</a>
+        <a class="nav-link" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>Age Calculator</h1>
+      <p class="muted">Exact years, months, and days.</p>
+    </div>
+
+    <section class="tool">
+      <div class="panel narrow">
+        <div class="form-row"><label for="birth">Birth date</label><input id="birth" type="date" /></div>
+        <div class="form-row">
+          <label for="asof">As of (optional)</label><input id="asof" type="date" />
+          <div class="hint muted">Leave empty to use today.</div>
+        </div>
+
+        <button class="btn" id="ageBtn">Calculate</button>
+
+        <div class="result" id="ageResult" aria-live="polite">
+          <div class="result-label">Age</div>
+          <div class="result-value">—</div>
+          <div class="result-sub muted"></div>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-label="Advertisement"><div class="ad-placeholder">Ad placement (below results)</div></div>
+      <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links"><a href="/privacy.html" class="muted-link">Privacy</a><a href="/contact.html" class="muted-link">Contact</a></div>
+      <div class="muted">Made simple.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/age.js" defer></script>
+</body>
+</html>

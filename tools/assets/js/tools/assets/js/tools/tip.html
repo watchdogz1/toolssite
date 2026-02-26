@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tip Calculator – Split the Bill</title>
+<meta name="description" content="Tip calculator: tip amount, total, and split per person."/>
+<link rel="icon" href="/favicon.ico"/><link rel="manifest" href="/site.webmanifest"/>
+<link rel="stylesheet" href="/assets/css/styles.css"/>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+<a class="logo" href="/">Utility Hub</a>
+<nav class="nav"><a class="nav-link" href="/">Home</a><a class="nav-link is-active" href="/#tools">Tools</a><a class="nav-link" href="/contact.html">Contact</a></nav>
+</div></header>
+
+<main id="main" class="container">
+  <div class="page-head"><h1>Tip Calculator</h1><p class="muted">Tip, total, and per person.</p></div>
+
+  <section class="tool">
+    <div class="panel narrow">
+      <div class="form-row"><label>Bill amount</label><input id="tipBill" inputmode="decimal" placeholder="e.g. 42.50"/></div>
+      <div class="form-row"><label>Tip (%)</label><input id="tipPct" inputmode="decimal" placeholder="e.g. 10"/></div>
+      <div class="form-row"><label>People</label><input id="tipPeople" inputmode="numeric" placeholder="e.g. 2"/></div>
+
+      <button class="btn" id="tipBtn">Calculate</button>
+
+      <div class="result" id="tipRes" aria-live="polite">
+        <div class="result-label">Total</div>
+        <div class="result-value">—</div>
+        <div class="result-sub muted"></div>
+      </div>
+    </div>
+
+    <div class="ad-slot" aria-label="Advertisement"><div class="ad-placeholder">Ad placement (below results)</div></div>
+    <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner">
+  <div class="footer-links"><a href="/privacy.html" class="muted-link">Privacy</a><a href="/contact.html" class="muted-link">Contact</a></div>
+  <div class="muted">Made simple.</div>
+</div></footer>
+
+<script src="/assets/js/app.js" defer></script>
+<script src="/assets/js/tip.js" defer></script>
+</body></html>

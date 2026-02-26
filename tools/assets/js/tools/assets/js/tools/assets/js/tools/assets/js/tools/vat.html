@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>VAT Calculator – Net ↔ Gross</title>
+<meta name="description" content="VAT calculator: net to gross, gross to net, and VAT amount."/>
+<link rel="icon" href="/favicon.ico"/><link rel="manifest" href="/site.webmanifest"/>
+<link rel="stylesheet" href="/assets/css/styles.css"/>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+<a class="logo" href="/">Utility Hub</a>
+<nav class="nav"><a class="nav-link" href="/">Home</a><a class="nav-link is-active" href="/#tools">Tools</a><a class="nav-link" href="/contact.html">Contact</a></nav>
+</div></header>
+
+<main id="main" class="container">
+  <div class="page-head"><h1>VAT Calculator</h1><p class="muted">Net ↔ Gross + VAT amount.</p></div>
+
+  <section class="tool">
+    <div class="tool-grid">
+      <div class="panel">
+        <h2 class="h3">Net → Gross</h2>
+        <div class="form-row"><label>Net amount</label><input id="vatNet" inputmode="decimal" placeholder="e.g. 100"/></div>
+        <div class="form-row"><label>VAT %</label><input id="vatPct1" inputmode="decimal" placeholder="e.g. 25"/></div>
+        <button class="btn" id="vatBtn1">Calculate</button>
+        <div class="result" id="vatRes1" aria-live="polite"><div class="result-label">Gross</div><div class="result-value">—</div><div class="result-sub muted"></div></div>
+      </div>
+
+      <div class="panel">
+        <h2 class="h3">Gross → Net</h2>
+        <div class="form-row"><label>Gross amount</label><input id="vatGross" inputmode="decimal" placeholder="e.g. 125"/></div>
+        <div class="form-row"><label>VAT %</label><input id="vatPct2" inputmode="decimal" placeholder="e.g. 25"/></div>
+        <button class="btn" id="vatBtn2">Calculate</button>
+        <div class="result" id="vatRes2" aria-live="polite"><div class="result-label">Net</div><div class="result-value">—</div><div class="result-sub muted"></div></div>
+      </div>
+    </div>
+
+    <div class="ad-slot" aria-label="Advertisement"><div class="ad-placeholder">Ad placement (below results)</div></div>
+    <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner">
+  <div class="footer-links"><a href="/privacy.html" class="muted-link">Privacy</a><a href="/contact.html" class="muted-link">Contact</a></div>
+  <div class="muted">Made simple.</div>
+</div></footer>
+
+<script src="/assets/js/app.js" defer></script>
+<script src="/assets/js/vat.js" defer></script>
+</body></html>

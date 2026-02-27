@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Free Percentage Calculator – Simple & Fast</title>
+  <meta name="description" content="Calculate percentage of a number, percentage increase, and percentage discount. Clean and fast." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Utility Hub</a>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link is-active" href="/#tools">Tools</a>
+        <a class="nav-link" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>Percentage Calculator</h1>
+      <p class="muted">Simple. Exact. No clutter.</p>
+    </div>
+
+    <section class="tool">
+      <div class="tool-grid">
+        <div class="panel">
+          <h2 class="h3">What is X% of Y?</h2>
+          <div class="form-row"><label>Percent (X)</label><input id="p1x" inputmode="decimal" placeholder="e.g. 15" /></div>
+          <div class="form-row"><label>Number (Y)</label><input id="p1y" inputmode="decimal" placeholder="e.g. 200" /></div>
+          <button class="btn" id="p1btn">Calculate</button>
+          <div class="result" id="p1result" aria-live="polite"><div class="result-label">Result</div><div class="result-value">—</div></div>
+        </div>
+
+        <div class="panel">
+          <h2 class="h3">X% increase</h2>
+          <div class="form-row"><label>Original</label><input id="p2orig" inputmode="decimal" placeholder="e.g. 120" /></div>
+          <div class="form-row"><label>Increase (%)</label><input id="p2pct" inputmode="decimal" placeholder="e.g. 10" /></div>
+          <button class="btn" id="p2btn">Calculate</button>
+          <div class="result" id="p2result" aria-live="polite"><div class="result-label">New value</div><div class="result-value">—</div></div>
+        </div>
+
+        <div class="panel">
+          <h2 class="h3">X% discount</h2>
+          <div class="form-row"><label>Original price</label><input id="p3orig" inputmode="decimal" placeholder="e.g. 499" /></div>
+          <div class="form-row"><label>Discount (%)</label><input id="p3pct" inputmode="decimal" placeholder="e.g. 25" /></div>
+          <button class="btn" id="p3btn">Calculate</button>
+          <div class="result" id="p3result" aria-live="polite"><div class="result-label">Discounted price</div><div class="result-value">—</div></div>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-label="Advertisement"><div class="ad-placeholder">Ad placement (below results)</div></div>
+      <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links"><a href="/privacy.html" class="muted-link">Privacy</a><a href="/contact.html" class="muted-link">Contact</a></div>
+      <div class="muted">We believe tools should be simple.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/percentage.js" defer></script>
+</body>
+</html>

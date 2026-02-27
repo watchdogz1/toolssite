@@ -58,7 +58,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   border-bottom:1px solid rgba(17,17,17,0.06);
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:600;letter-spacing:-0.02em}
+
+/* Logo: thicker + slightly bigger */
+.logo{
+  font-weight:800;
+  letter-spacing:-0.02em;
+  font-size:16px;
+}
+@media (min-width:740px){
+  .logo{font-size:17px}
+}
 
 .nav{display:flex;gap:var(--space-2);flex-wrap:wrap}
 .nav-link{
@@ -96,6 +105,16 @@ h1{
   transition:transform 120ms ease, box-shadow 120ms ease;
 }
 .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+/* Tool card icon */
+.card-icon{
+  width:44px;
+  height:44px;
+  display:block;
+  margin-bottom:12px;
+  border-radius:14px;
+}
+
 .card-title{font-weight:600;margin-bottom:6px}
 .card-desc{color:var(--muted);font-size:14px;margin-bottom:var(--space-3)}
 .card-cta{font-size:14px;color:var(--text)}

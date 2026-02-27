@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Word Counter Online – Instant Character Count</title>
+  <meta name="description" content="Instant word counter and character counter (with and without spaces). Clean and fast." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Utility Hub</a>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link is-active" href="/#tools">Tools</a>
+        <a class="nav-link" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>Word Counter</h1>
+      <p class="muted">Live word + character count.</p>
+    </div>
+
+    <section class="tool">
+      <div class="panel">
+        <label class="muted" for="wcText">Paste or type your text</label>
+        <textarea id="wcText" rows="10" placeholder="Start typing…"></textarea>
+
+        <div class="stats">
+          <div class="stat"><div class="stat-label">Words</div><div class="stat-value" id="wcWords">0</div></div>
+          <div class="stat"><div class="stat-label">Characters</div><div class="stat-value" id="wcChars">0</div></div>
+          <div class="stat"><div class="stat-label">Characters (no spaces)</div><div class="stat-value" id="wcCharsNoSpaces">0</div></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-ghost" id="wcClear">Clear</button>
+          <button class="btn" id="wcCopy">Copy</button>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-label="Advertisement"><div class="ad-placeholder">Ad placement (below results)</div></div>
+      <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links"><a href="/privacy.html" class="muted-link">Privacy</a><a href="/contact.html" class="muted-link">Contact</a></div>
+      <div class="muted">We believe tools should be simple.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/word-counter.js" defer></script>
+</body>
+</html>

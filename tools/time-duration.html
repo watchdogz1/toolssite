@@ -1,144 +1,111 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Time Duration Calculator – Utility Hub</title>
-  <meta name="description" content="Calculate the duration between a start time and end time. Get total hours and minutes instantly." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time Duration Calculator – Utility Hub</title>
+<meta name="description" content="Calculate the time difference between two times. Fast and simple duration calculator.">
 
-  <!-- Favicons / App Icons -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/" aria-label="Utility Hub">
-        <img src="/assets/brand/logo.svg" alt="Utility Hub" class="logo-img" />
-      </a>
-      <nav class="nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/#tools">Tools</a>
-        <a class="nav-link" href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main" class="container tool">
-    <div class="page-head">
-      <h1>Time Duration Calculator</h1>
-      <p class="muted">Enter a start time and end time to get the total duration.</p>
-    </div>
+<header class="site-header">
+<div class="container header-inner">
 
-    <div class="tool-grid">
-      <section class="panel">
-        <h2 class="h3">Calculator</h2>
+<a class="logo" href="/" aria-label="Utility Hub">
+<img src="/assets/brand/logo.svg" alt="Utility Hub" class="logo-img">
+</a>
 
-        <div class="form-row">
-          <label for="startTime">Start time</label>
-          <input id="startTime" type="time" />
-        </div>
+<nav class="nav">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/#tools">Tools</a>
+<a class="nav-link" href="/contact.html">Contact</a>
+</nav>
 
-        <div class="form-row">
-          <label for="endTime">End time</label>
-          <input id="endTime" type="time" />
-        </div>
+</div>
+</header>
 
-        <p class="hint muted">If the end time is earlier than the start time, it will be treated as next day.</p>
+<main id="main" class="container tool">
 
-        <div class="actions">
-          <button class="btn" id="calculateBtn" type="button">Calculate</button>
-          <button class="btn btn-ghost" id="resetBtn" type="button">Reset</button>
-        </div>
+<div class="page-head">
+<h1>Time Duration Calculator</h1>
+<p class="muted">Calculate the difference between two times.</p>
+</div>
 
-        <div class="result" id="result" hidden>
-          <div class="result-label">Duration</div>
-          <div class="result-value" id="resultValue">0h 0m</div>
-          <div class="result-sub muted" id="resultSub">0 total minutes</div>
-        </div>
-      </section>
+<div class="tool-grid">
 
-      <aside class="panel">
-        <h2 class="h3">What this tool does</h2>
-        <p>Use this calculator to find the exact duration between two times.</p>
-        <p class="muted">Useful for work shifts, breaks, travel timing, and daily planning.</p>
-      </aside>
-    </div>
+<section class="panel">
 
-    <div class="backline">
-      <a class="btn btn-ghost" href="/">← Back home</a>
-    </div>
-  </main>
+<h2 class="h3">Calculator</h2>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-links">
-        <a href="/about.html" class="muted-link">About</a>
-        <a href="/privacy.html" class="muted-link">Privacy</a>
-        <a href="/contact.html" class="muted-link">Contact</a>
-      </div>
-      <div class="muted">We believe tools should be simple.</div>
-    </div>
-  </footer>
+<div class="form-row">
+<label for="startTime">Start time</label>
+<input id="startTime" type="time">
+</div>
 
-  <script>
-    const startTimeInput = document.getElementById('startTime');
-    const endTimeInput = document.getElementById('endTime');
-    const calculateBtn = document.getElementById('calculateBtn');
-    const resetBtn = document.getElementById('resetBtn');
-    const result = document.getElementById('result');
-    const resultValue = document.getElementById('resultValue');
-    const resultSub = document.getElementById('resultSub');
+<div class="form-row">
+<label for="endTime">End time</label>
+<input id="endTime" type="time">
+</div>
 
-    function timeToMinutes(value) {
-      const [hours, minutes] = value.split(':').map(Number);
-      return (hours * 60) + minutes;
-    }
+<p class="hint muted">
+If end time is earlier than start time it will be treated as the next day.
+</p>
 
-    function calculateDuration() {
-      const start = startTimeInput.value;
-      const end = endTimeInput.value;
+<div class="actions">
+<button id="calculateBtn" class="btn">Calculate</button>
+<button id="resetBtn" class="btn btn-ghost">Reset</button>
+</div>
 
-      if (!start || !end) {
-        result.hidden = false;
-        resultValue.textContent = 'Enter both times';
-        resultSub.textContent = 'Please choose a start time and an end time.';
-        return;
-      }
+<div class="result" id="result" hidden>
+<div class="result-label">Duration</div>
+<div class="result-value" id="resultValue">0h 0m</div>
+<div class="result-sub muted" id="resultSub">0 total minutes</div>
+</div>
 
-      let startMinutes = timeToMinutes(start);
-      let endMinutes = timeToMinutes(end);
+</section>
 
-      if (endMinutes < startMinutes) {
-        endMinutes += 24 * 60;
-      }
+<aside class="panel">
+<h2 class="h3">About</h2>
+<p>
+This tool calculates the duration between two times. Useful for work shifts,
+break tracking, or planning schedules.
+</p>
+</aside>
 
-      const totalMinutes = endMinutes - startMinutes;
-      const hours = Math.floor(totalMinutes / 60);
-      const minutes = totalMinutes % 60;
+</div>
 
-      result.hidden = false;
-      resultValue.textContent = `${hours}h ${minutes}m`;
-      resultSub.textContent = `${totalMinutes} total minutes`;
-    }
+<div class="backline">
+<a class="btn btn-ghost" href="/">← Back home</a>
+</div>
 
-    function resetCalculator() {
-      startTimeInput.value = '';
-      endTimeInput.value = '';
-      result.hidden = true;
-      resultValue.textContent = '0h 0m';
-      resultSub.textContent = '0 total minutes';
-    }
+</main>
 
-    calculateBtn.addEventListener('click', calculateDuration);
-    resetBtn.addEventListener('click', resetCalculator);
-  </script>
-  <script src="/assets/js/app.js" defer></script>
+<footer class="site-footer">
+<div class="container footer-inner">
+
+<div class="footer-links">
+<a href="/about.html" class="muted-link">About</a>
+<a href="/privacy.html" class="muted-link">Privacy</a>
+<a href="/contact.html" class="muted-link">Contact</a>
+</div>
+
+<div class="muted">We believe tools should be simple.</div>
+
+</div>
+</footer>
+
+<script src="/assets/js/time-duration.js"></script>
+<script src="/assets/js/app.js" defer></script>
+
 </body>
 </html>

@@ -1,66 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Date Difference Calculator – Days & Exact Y/M/D</title>
-  <meta name="description" content="Calculate days and exact years/months/days between two dates." />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Distance Calculator – Utility Hub</title>
+<meta name="description" content="Calculate travel time from distance and speed.">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/">Utility Hub</a>
-      <nav class="nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link is-active" href="/#tools">Tools</a>
-        <a class="nav-link" href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main" class="container">
-    <div class="page-head">
-      <h1>Date Difference</h1>
-      <p class="muted">Exact time between two dates.</p>
-    </div>
+<header class="site-header">
+<div class="container header-inner">
 
-    <section class="tool">
-      <div class="panel narrow">
-        <div class="form-row"><label>Start date</label><input id="ddStart" type="date" /></div>
-        <div class="form-row"><label>End date</label><input id="ddEnd" type="date" /></div>
-        <button class="btn" id="ddBtn">Calculate</button>
+<a class="logo" href="/" aria-label="Utility Hub">
+<img src="/assets/brand/logo.svg" alt="Utility Hub" class="logo-img">
+</a>
 
-        <div class="result" id="ddResult" aria-live="polite">
-          <div class="result-label">Difference</div>
-          <div class="result-value">—</div>
-          <div class="result-sub muted"></div>
-        </div>
-      </div>
+<nav class="nav">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/#tools">Tools</a>
+<a class="nav-link" href="/contact.html">Contact</a>
+</nav>
 
-      <div class="ad-slot" aria-label="Advertisement">
-        <div class="ad-placeholder">Ad placement (below results)</div>
-      </div>
+</div>
+</header>
 
-      <div class="backline"><a class="muted-link" href="/">← Back to tools</a></div>
-    </section>
-  </main>
+<main id="main" class="container tool">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-links">
-        <a href="/privacy.html" class="muted-link">Privacy</a>
-        <a href="/contact.html" class="muted-link">Contact</a>
-      </div>
-      <div class="muted">Made simple.</div>
-    </div>
-  </footer>
+<div class="page-head">
+<h1>Distance Calculator</h1>
+<p class="muted">Estimate travel time using distance and speed.</p>
+</div>
 
-  <script src="/assets/js/app.js" defer></script>
-  <script src="/assets/js/date-difference.js" defer></script>
+<div class="tool-grid">
+
+<section class="panel">
+
+<h2 class="h3">Calculator</h2>
+
+<div class="form-row">
+<label for="distance">Distance</label>
+<input id="distance" type="number" placeholder="e.g. 120">
+</div>
+
+<div class="form-row">
+<label for="speed">Speed</label>
+<input id="speed" type="number" placeholder="e.g. 80">
+</div>
+
+<div class="form-row">
+<label for="unit">Unit</label>
+<select id="unit">
+<option value="kmh">Kilometers / kmh</option>
+<option value="mph">Miles / mph</option>
+</select>
+</div>
+
+<p class="hint muted">Formula: time = distance ÷ speed</p>
+
+<div class="actions">
+<button id="calculateBtn" class="btn">Calculate</button>
+<button id="resetBtn" class="btn btn-ghost">Reset</button>
+</div>
+
+<div class="result" id="result" hidden>
+<div class="result-label">Estimated travel time</div>
+<div class="result-value" id="resultValue">0h 0m</div>
+<div class="result-sub muted" id="resultSub">0 hours</div>
+</div>
+
+</section>
+
+<aside class="panel">
+<h2 class="h3">About</h2>
+<p>
+Calculate how long a journey will take using distance and average speed.
+Useful for driving, cycling, or delivery planning.
+</p>
+</aside>
+
+</div>
+
+<div class="backline">
+<a class="btn btn-ghost" href="/">← Back home</a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+
+<div class="footer-links">
+<a href="/about.html" class="muted-link">About</a>
+<a href="/privacy.html" class="muted-link">Privacy</a>
+<a href="/contact.html" class="muted-link">Contact</a>
+</div>
+
+<div class="muted">We believe tools should be simple.</div>
+
+</div>
+</footer>
+
+<script src="/assets/js/distance-calculator.js"></script>
+<script src="/assets/js/app.js" defer></script>
+
 </body>
 </html>
